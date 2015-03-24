@@ -1,0 +1,34 @@
+package list;
+
+public class Volume {
+	private String nome;
+	private String editore;
+	private int annoPubblicazione;
+	private AddOnlyList<String> listaAutori;
+	
+	public Volume(String nome, String editore, int annoPubblicazione) {
+		this.nome = nome;
+		this.editore = editore;
+		this.annoPubblicazione = annoPubblicazione;
+	}
+	
+	public String getNome(){
+		return this.nome;
+	}
+	
+	public String editore(){
+		return this.editore;
+	}
+	
+	public int getAnnoPubblicazione(){
+		return this.annoPubblicazione;
+	}
+	
+	public AddOnlyList<String> getListaAutori(){
+		return this.listaAutori;
+	}
+	
+	public void addAutore(String autore){
+		this.listaAutori.add(autore);
+	}
+}

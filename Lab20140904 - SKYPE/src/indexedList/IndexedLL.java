@@ -90,13 +90,13 @@ public class IndexedLL<T> implements IndexedList<T> {
 		if(head.pos == i){
 			head.next.prev = null;
 			head = head.next;
-			n++;
+			n--;
 			return;
 		}
 		
 		boolean found = false;
 		Record<T> tmp = head;
-		while(!found){ //il secondo controllo Ë inutile,perchË lo trover‡ sicuramente altrimenti si sarebbe sollevata l'eccezione isEmpty
+		while(!found){ //il secondo controllo √® inutile,perch√® lo trover√† sicuramente altrimenti si sarebbe sollevata l'eccezione isEmpty
 			if(tmp.pos == i)
 				found = true;
 			else
